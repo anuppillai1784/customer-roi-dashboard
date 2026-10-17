@@ -11,3 +11,7 @@ class Event:
     model: str
     automated: bool
     timestamp: str
+
+
+def filter_month(events, month):
+    return [e for e in events if e.timestamp[:7] == month]
