@@ -1,0 +1,7 @@
+[project]
+name = "customer-roi-dashboard"
+version = "0.1.0"
+description = "Monthly ROI dashboard for customer departments, using synthetic data."
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = []
