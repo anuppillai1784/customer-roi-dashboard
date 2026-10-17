@@ -31,7 +31,7 @@ def _department_row(config, department, events):
         "hours_saved": hours_saved,
         "labor_value_usd": labor_value,
         "token_spend_usd": token_spend,
-        "roi": (labor_value - token_spend) / token_spend,
+        "roi": None if token_spend == 0 else (labor_value - token_spend) / token_spend,
     }
 
 
