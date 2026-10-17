@@ -13,6 +13,21 @@ def event_saved_minutes(config, event):
     return timing["baseline_minutes"] - timing["review_minutes"]
 
 
+SUMMED_KEYS = ("tasks_total", "tasks_automated", "hours_saved", "labor_value_usd", "token_spend_usd")
+
+
+def roi_ratio(labor_value, token_spend):
+    if token_spend == 0:
+        return None
+    return (labor_value - token_spend) / token_spend
+
+
+def totals_row(rows):
+    totals = {key: sum(row[key] for row in rows) for key in SUMMED_KEYS}
+    totals["roi"] = roi_ratio(totals["labor_value_usd"], totals["token_spend_usd"])
+    return totals
+
+
 def _department_row(config, department, events):
     mine = [
         e
@@ -31,7 +46,7 @@ def _department_row(config, department, events):
         "hours_saved": hours_saved,
         "labor_value_usd": labor_value,
         "token_spend_usd": token_spend,
-        "roi": None if token_spend == 0 else (labor_value - token_spend) / token_spend,
+        "roi": roi_ratio(labor_value, token_spend),
     }
 
 
