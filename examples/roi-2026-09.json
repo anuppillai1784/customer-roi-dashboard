@@ -1,0 +1,92 @@
+{
+  "assumptions": {
+    "loaded_hourly_rate_usd": 60.0,
+    "prices_usd_per_million_tokens": {
+      "model-large": {
+        "input": 3.0,
+        "output": 15.0
+      },
+      "model-small": {
+        "input": 0.25,
+        "output": 1.25
+      }
+    },
+    "rules": [
+      "Hours saved count automated tasks only. Each task saves its baseline minutes minus its review minutes.",
+      "Labor value is hours saved times the loaded hourly rate.",
+      "Token spend counts every task, automated or not, at the price table rates.",
+      "ROI is (labor value minus token spend) divided by token spend. It is null when token spend is zero.",
+      "Prices are illustrative. They are not vendor list prices."
+    ],
+    "task_types": {
+      "contract_summary": {
+        "baseline_minutes": 50,
+        "review_minutes": 10
+      },
+      "invoice_reconciliation": {
+        "baseline_minutes": 35,
+        "review_minutes": 6
+      },
+      "report_drafting": {
+        "baseline_minutes": 90,
+        "review_minutes": 15
+      },
+      "ticket_triage": {
+        "baseline_minutes": 12,
+        "review_minutes": 2
+      }
+    }
+  },
+  "data_source": "Synthetic events, generated from a fixed random seed.",
+  "departments": [
+    {
+      "customer": "Customer A",
+      "department": "Finance Operations",
+      "hours_saved": 19.03,
+      "labor_value_usd": 1142.0,
+      "roi": 99.79,
+      "tasks_automated": 30,
+      "tasks_total": 40,
+      "token_spend_usd": 11.3306
+    },
+    {
+      "customer": "Customer A",
+      "department": "Customer Support",
+      "hours_saved": 16.17,
+      "labor_value_usd": 970.0,
+      "roi": 97.98,
+      "tasks_automated": 25,
+      "tasks_total": 40,
+      "token_spend_usd": 9.8001
+    },
+    {
+      "customer": "Customer B",
+      "department": "Legal",
+      "hours_saved": 18.25,
+      "labor_value_usd": 1095.0,
+      "roi": 112.77,
+      "tasks_automated": 24,
+      "tasks_total": 40,
+      "token_spend_usd": 9.6249
+    },
+    {
+      "customer": "Customer B",
+      "department": "Sales Operations",
+      "hours_saved": 17.17,
+      "labor_value_usd": 1030.0,
+      "roi": 72.1,
+      "tasks_automated": 26,
+      "tasks_total": 40,
+      "token_spend_usd": 14.0896
+    }
+  ],
+  "month": "2026-09",
+  "totals": {
+    "hours_saved": 70.62,
+    "labor_value_usd": 4237.0,
+    "roi": 93.48,
+    "tasks_automated": 105,
+    "tasks_total": 160,
+    "token_spend_usd": 44.8452
+  }
+}

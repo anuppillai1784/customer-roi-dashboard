@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Customer department ROI 2026-09</title><style>
+:root {
+  --bg: #111514;
+  --surface: #182020;
+  --line: #2c3634;
+  --text: #e6ece8;
+  --muted: #9aa7a1;
+  --hours: #6fb5a6;
+  --roi: #e2ab4c;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.5 -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+main { max-width: 1040px; margin: 0 auto; padding: 32px 16px 56px; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
+h1 { font-size: 2rem; margin: 0 0 8px; }
+h2 {
+  font-size: 1.3rem;
+  margin: 40px 0 14px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.lede { color: var(--muted); max-width: 64ch; margin: 0 0 16px; }
+.notice {
+  margin: 0;
+  padding: 10px 14px;
+  border-left: 3px solid var(--roi);
+  background: var(--surface);
+  color: var(--muted);
+}
+.table-wrap { overflow-x: auto; background: var(--surface); }
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: right;
+  vertical-align: top;
+}
+th:nth-child(-n+2), td:nth-child(-n+2) { text-align: left; }
+thead th { color: var(--muted); font-size: 0.8rem; font-weight: 600; }
+tr.total td, tr.total th { font-weight: 600; }
+.roi { color: var(--roi); font-size: 1.05rem; white-space: nowrap; }
+.basis {
+  display: block;
+  max-width: 30ch;
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1.35;
+  white-space: normal;
+}
+.chart { display: block; width: 100%; height: auto; background: var(--surface); }
+.chart .label, .chart .value { font-size: 13px; fill: var(--text); }
+.chart .value { fill: var(--muted); }
+.chart .bar { fill: var(--hours); }
+.rules { color: var(--muted); padding-left: 20px; }
+.rules li { margin: 6px 0; }
+footer { margin-top: 40px; color: var(--muted); font-size: 0.8rem; }
+@media (max-width: 600px) {
+  main { padding: 24px 16px 40px; }
+  h1 { font-size: 1.6rem; }
+}
+</style></head><body><main><h1>Customer department ROI, 2026-09</h1><p class="lede">Hours saved, token spend and ROI for each customer department. Every ROI figure shows the assumptions it uses.</p><p class="notice">Synthetic events, generated from a fixed random seed. Prices are illustrative.</p><h2>Hours saved by department</h2><svg class="chart" viewBox="0 0 770 160" role="img" aria-label="Hours saved by department"><text class="label" x="0" y="17">Customer A, Finance Operations</text><rect class="bar" x="260" y="0" width="420.00" height="24"/><text class="value" x="688.00" y="17">19.03 h</text><text class="label" x="0" y="57">Customer A, Customer Support</text><rect class="bar" x="260" y="40" width="356.88" height="24"/><text class="value" x="624.88" y="57">16.17 h</text><text class="label" x="0" y="97">Customer B, Legal</text><rect class="bar" x="260" y="80" width="402.79" height="24"/><text class="value" x="670.79" y="97">18.25 h</text><text class="label" x="0" y="137">Customer B, Sales Operations</text><rect class="bar" x="260" y="120" width="378.95" height="24"/><text class="value" x="646.95" y="137">17.17 h</text></svg><h2>Department results</h2><div class="table-wrap"><table><thead><tr><th scope="col">Customer</th><th scope="col">Department</th><th scope="col">Tasks</th><th scope="col">Automated</th><th scope="col">Hours saved</th><th scope="col">Labor value</th><th scope="col">Token spend</th><th scope="col">ROI</th></tr></thead><tbody><tr><td>Customer A</td><td>Finance Operations</td><td class="num">40</td><td class="num">30</td><td class="num">19.03</td><td class="num">$1,142.00</td><td class="num">$11.3306</td><td class="roi">99.8x<span class="basis">Assumes 60.00 USD per hour, baseline minus review minutes per task, and illustrative token prices.</span></td></tr><tr><td>Customer A</td><td>Customer Support</td><td class="num">40</td><td class="num">25</td><td class="num">16.17</td><td class="num">$970.00</td><td class="num">$9.8001</td><td class="roi">98.0x<span class="basis">Assumes 60.00 USD per hour, baseline minus review minutes per task, and illustrative token prices.</span></td></tr><tr><td>Customer B</td><td>Legal</td><td class="num">40</td><td class="num">24</td><td class="num">18.25</td><td class="num">$1,095.00</td><td class="num">$9.6249</td><td class="roi">112.8x<span class="basis">Assumes 60.00 USD per hour, baseline minus review minutes per task, and illustrative token prices.</span></td></tr><tr><td>Customer B</td><td>Sales Operations</td><td class="num">40</td><td class="num">26</td><td class="num">17.17</td><td class="num">$1,030.00</td><td class="num">$14.0896</td><td class="roi">72.1x<span class="basis">Assumes 60.00 USD per hour, baseline minus review minutes per task, and illustrative token prices.</span></td></tr><tr class="total"><td colspan="2">All departments</td><td class="num">160</td><td class="num">105</td><td class="num">70.62</td><td class="num">$4,237.00</td><td class="num">$44.8452</td><td class="roi">93.5x<span class="basis">Assumes 60.00 USD per hour, baseline minus review minutes per task, and illustrative token prices.</span></td></tr></tbody></table></div><h2>Assumptions</h2><p>Loaded hourly rate: 60.00 USD per hour.</p><div class="table-wrap"><table><thead><tr><th scope="col">Task type</th><th scope="col">Baseline minutes</th><th scope="col">Review minutes</th></tr></thead><tbody><tr><td>ticket_triage</td><td class="num">12</td><td class="num">2</td></tr><tr><td>invoice_reconciliation</td><td class="num">35</td><td class="num">6</td></tr><tr><td>contract_summary</td><td class="num">50</td><td class="num">10</td></tr><tr><td>report_drafting</td><td class="num">90</td><td class="num">15</td></tr></tbody></table></div><div class="table-wrap"><table><thead><tr><th scope="col">Model</th><th scope="col">Input, USD per million tokens</th><th scope="col">Output, USD per million tokens</th></tr></thead><tbody><tr><td>model-small</td><td class="num">0.25</td><td class="num">1.25</td></tr><tr><td>model-large</td><td class="num">3.00</td><td class="num">15.00</td></tr></tbody></table></div><ol class="rules"><li>Hours saved count automated tasks only. Each task saves its baseline minutes minus its review minutes.</li><li>Labor value is hours saved times the loaded hourly rate.</li><li>Token spend counts every task, automated or not, at the price table rates.</li><li>ROI is (labor value minus token spend) divided by token spend. It is null when token spend is zero.</li><li>Prices are illustrative. They are not vendor list prices.</li></ol></main></body></html>
