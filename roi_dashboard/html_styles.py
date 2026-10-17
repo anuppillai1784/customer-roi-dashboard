@@ -59,7 +59,6 @@ tr.total td, tr.total th { font-weight: 600; }
 .chart .bar { fill: var(--hours); }
 .rules { color: var(--muted); padding-left: 20px; }
 .rules li { margin: 6px 0; }
-footer { margin-top: 40px; color: var(--muted); font-size: 0.8rem; }
 @media (max-width: 600px) {
   main { padding: 24px 16px 40px; }
   h1 { font-size: 1.6rem; }
