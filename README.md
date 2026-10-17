@@ -6,11 +6,11 @@ The tool reads usage events for customer departments. It computes tasks automate
 
 ## Why it matters
 
-Teams need to show the value of automation in plain terms. This dashboard puts time saved and token cost side by side.
+A customer wants to know what automation saves in hours and in dollars. This dashboard answers for each department and shows the assumptions beside each answer.
 
 ## Quickstart
 
-Run these commands from the repo root. Python 3.11 or later is required. No install step is needed.
+You need Python 3.11 or later and nothing else. Run these commands from the repo root.
 
 ```sh
 python3 -m unittest discover
@@ -65,7 +65,7 @@ The config file sets the loaded hourly rate, the baseline and review minutes for
 
 Metrics run once for each department. Hours saved sums the net minutes of each automated task, then divides by 60. Net minutes are baseline minutes minus review minutes. Labor value is hours saved multiplied by the loaded hourly rate. Token spend sums the cost of every task, automated or not.
 
-ROI is labor value minus token spend, divided by token spend. When token spend is zero, ROI is null. The report adds the assumptions to the JSON file. The HTML page shows the same assumptions beside every ROI figure.
+ROI is labor value minus token spend, divided by token spend. When token spend is zero, ROI is null. The report adds the assumptions to the JSON file. The HTML page shows the same assumptions beside every ROI value.
 
 ## Sample output
 
