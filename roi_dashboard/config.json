@@ -1,0 +1,21 @@
+{
+  "random_seed": 20260917,
+  "synthetic_months": ["2026-07", "2026-08", "2026-09"],
+  "loaded_hourly_rate_usd": 60.0,
+  "task_types": {
+    "ticket_triage": {"baseline_minutes": 12, "review_minutes": 2},
+    "invoice_reconciliation": {"baseline_minutes": 35, "review_minutes": 6},
+    "contract_summary": {"baseline_minutes": 50, "review_minutes": 10},
+    "report_drafting": {"baseline_minutes": 90, "review_minutes": 15}
+  },
+  "prices_usd_per_million_tokens": {
+    "model-small": {"input": 0.25, "output": 1.25},
+    "model-large": {"input": 3.0, "output": 15.0}
+  },
+  "departments": [
+    {"customer": "Customer A", "department": "Finance Operations"},
+    {"customer": "Customer A", "department": "Customer Support"},
+    {"customer": "Customer B", "department": "Legal"},
+    {"customer": "Customer B", "department": "Sales Operations"}
+  ]
+}
